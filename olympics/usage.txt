@@ -1,0 +1,16 @@
+SYNOPSIS
+    python3 olympics.py [-h | --help]
+    python3 olympics.py gold
+    python3 olympics.py events
+    python3 olympics.py athletes <string>
+    
+DESCRIPTION
+    The following options are available:
+
+    gold returns a list of nocs and the number of gold medals they won, in descending order via medals
+    
+    events Prints the list of all the events in the olympics
+
+    athletes returns a list of the full names of the athletes from a specific NOC
+
+    help Prints the usage/help statement if the user's command-line syntax is invalid.
