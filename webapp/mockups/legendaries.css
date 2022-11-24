@@ -1,0 +1,38 @@
+/* This file was created by Ruben Boero and Serafin Patino */
+
+.header {
+    display: flex;
+    /* https://teamtreehouse.com/community/how-to-position-a-flex-item-to-the-far-right-in-the-flexbox */
+    justify-content: space-between;
+}
+
+.title_container {
+    text-align: center;
+    padding: 10px;
+}
+
+.empty_space {
+    padding: 50px;
+}
+
+/* https://stackoverflow.com/questions/3463621/css-label-text-right-below-input-element */
+div.search_text_pair {
+    float:left;
+}
+
+#logo{
+    display: block;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty_space {
+    padding: 50px;
+}
+
+#drop_down {
+    text-align: center;
+    padding: 10px;
+}

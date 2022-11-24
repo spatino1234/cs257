@@ -1,8 +1,6 @@
 '''
     olympics.py
     Serafin Patino Jr
-
-
     Using psycopg2 to connect and query psql olympics database
 '''
 import sys
@@ -143,7 +141,7 @@ def main():
                 print(athlete)
         else:
             print('your command is invalid, try again')
-            
+
     # deals with the user typing in a invalid command
     else:
         print('your command is invalid, try again')

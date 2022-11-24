@@ -1,0 +1,72 @@
+/* This file was created by Ruben Boero and Serafin Patino */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.search_container{
+  position: absolute;
+  /* top height is neded to make the position: absolute hold the search bar in the same place */
+  top: 300px;
+  width: 100%;
+  /* min-height: 100vh; */
+  padding: 5%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#logo{
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-bottom: auto; */
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_link {
+  display: flex;
+  margin: 5px;
+  border: 2px;
+}
+
+#advanced_search {
+  width: 92.5%;
+  text-align: right;
+}
+
+#search_bar {
+  width: 90%;
+  height: 50px;
+  border-radius: 40px;
+}
+
+#go_button {
+  border: outset, 1px solid black;
+  width: 30px;
+  height: 50px;
+  /* Relative positions + 5px makes the go button aligh horizontally with the search bar */
+  position: relative;
+  bottom: 5px;
+  border-radius: 20px;
+}
+
+/* https://stackoverflow.com/questions/10363674/change-size-of-text-in-text-input-tag */
+input[type = "text"] {
+  font-size:25px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* position: absolute; */
+footer {
+  position: absolute;
+  bottom: 5px;
+  right: 43%;
+}

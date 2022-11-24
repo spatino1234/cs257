@@ -1,0 +1,46 @@
+Authors: Serafin Patino and Ruben Boero
+
+A CSV of all the Pokémon and their stats from the first 8 generations of the game.
+
+https://www.kaggle.com/datasets/mariotormo/complete-pokemon-dataset-updated-090420
+
+
+Our target user is someone who is already well versed with all of the game mechanics of Pokémon.
+
+Story:
+1) As a user, I can search for any attribute that a Pokémon can have (name, index number, ability,
+type, etc.), so that I can get a list of all Pokémon with the given attribute. Then from that list,
+a Pokémon can be selected, and information specific to that given Pokémon is displayed.
+
+2) As a user, I can sort by general information about a group of Pokémon such as what generation
+they belong to, what egg group they're in, if the Pokémon is legendary, etc. and display a list of
+all Pokémon that are part of that group.
+
+3) As a user, I can sort by specific information about a Pokémon. For example, I could sort Pokémon
+by descending special attack, or by increasing speed.
+
+4) As a user, I can visualize the data. For example, if I search for Bulbasaur I can see a bar graph
+of its stats relative to the stats of other Pokémon. As an example, if Bulbasaur has the highest
+defense stat, then that bar would be maxed out (as large as possible).
+
+Implementation:
+1) We could have a search bar. Once the search term is entered, a new page is shown with the results of
+the search. Each Pokémon in the result list can be clicked on, and information about it can be viewed.
+We will only allow search strings to be entered with the exception of the index value of the Pokémon.
+So, for example, weight cannot be searched for.
+
+2) On the home page, we could have links to general categories such as generations, egg groups, 
+legendaries. When these links are clicked on, it will take the user to a page with a drop down menu. 
+The drop down menus will allow the user to get a table of Pokémon that fit a subcategory. For 
+example, if the user selects the egg group link, it will take them to a drop down menu with a list 
+of all the egg groups. From there, the desired egg group can be selected, and Pokémon in that egg 
+group can be viewed. For some categories, the user might want to view multiple subcategories at once,
+in this case we could allow multiple fields to be selected via check box and displayed all at once.
+
+3) We could have a link on the home page that takes the user to a page that helps guide the user through 
+creating a query (basically an advanced search). The advanced search page will have all of the attributes 
+each Pokémon has, and will allow the user to select and exclude which attributes to search by. For example, 
+a user might want to search for all Pokémon that have the Pressure ability that are not legendary Pokémon.
+
+4) We could include a include bar graphs on the page for specific Pokémon to visualize certain stats 
+(attack ,special attack, defense, weight, height, etc.).

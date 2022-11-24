@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <script type = "text/javascript" src = "{{ url_for('static', filename='search.js') }}"></script>
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static',filename='search_results.css') }}">
+    <link rel = "icon" type = "image/x-icon" href = "{{ url_for('static',filename='favicon.ico') }}">
+</head>
+
+<body>
+    <body>
+        <div class = "header">
+            <!-- The following site was used to learn how to make an image a link:
+            https://pagedart.com/blog/linking-images-in-html/ -->
+            <a href = "/"><img id = "logo" alt = "Logo" src="{{ url_for('static', filename='logo.png') }}"></a>
+            <a href = "/generations">Generations</a>
+            <a href = "/legendaries">Legendaries</a>
+            <a href = "/egg_groups">Egg Groups</a>
+            <a href = "/types">Types</a>
+            
+            <div class="search_text_pair">
+                <select id = "search_dropdown"> 
+                    <option value = "pokemon">Pokémon</option> 
+                    <option value = "pokedex_number">Pokédex Number</option> 
+                    <option value = "ability">Ability</option> 
+                    <option value = "type">Type</option> 
+                </select>
+                <input id = "search_bar" name = "search_bar" type = "text" placeholder = "Search"/>
+                <input id = "go_button" type = "submit" value = "Go"><br/> <!-- <br /> is line break-->
+            </div>
+        </div>
+    
+        <div class = "title_container">
+            <h1>Search Results</h1>
+        </div>
+        <div class = "empty_space"></div>
+        
+        <table id = "search_results_table">
+            <tr id = "table_header"><td>Dex Number</td><td>Pokémon</td><td>Ability 1</td><td>Ability 2</td><td>Hidden Ability</td><td>Type 1</td><td>Type 2</td><td>Generation</td></tr>
+            {%for pokemon in search_results%}
+            <tr>
+                <td>{{pokemon['dex_num']}}</td>
+                <td><a href = /{{url[loop.index0]}}>{{pokemon['name']}}</a></td>                
+                <td>{{pokemon['ability1']}}</td>
+                <td>{{pokemon['ability2']}}</td>
+                <td>{{pokemon['ability3']}}</td>             
+                <td>{{pokemon['type1']}}</td>
+                <td>{{pokemon['type2']}}</td>
+                <td>{{pokemon['generation'] | replace("generation", "Generation")}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </body>
+</body>

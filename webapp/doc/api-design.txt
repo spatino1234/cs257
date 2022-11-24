@@ -1,0 +1,37 @@
+This file was created by Ruben Boero and Serafin Patino
+
+REQUEST: /pokemon?name={search_name}&ability={search_ability}&type={search_type}&id={search_id}
+RESPONSE: a JSON list of dictionaries containing all the pokemon in our 
+database that match the optional parameters organized by the ID number of the pokemon
+
+REQUEST: /generations
+RESPONSE: a JSON list of all the generations ordered in ascending order
+(gen 1, gen 2, etc)
+
+REQUEST: /generation/<gen_number>
+RESPONSE: a JSON list of dictionaries containing all pokemon from generation
+1, 2, ..., or 8
+
+REQUEST: /legendaries
+RESPONSE: a JSON list of all legendary categories sorted by ascending ID
+number
+
+REQUEST: /legendaries/<class_of_legendary>
+RESPONSE: a JSON list of dictionaries containing all pokemon from the given
+legendary category
+
+REQUEST: /egg_groups
+RESPONSE: a JSON list containing all the names of the egg groups ordered 
+by ascending ID number
+
+REQUEST: /egg_group/<egg_group_name>
+RESPONSE: a JSON list of dictionaries containing all pokemon from a given
+egg group ordered by descending ID number
+
+REQUEST: /types
+RESPONSE: a JSON list of all the pokemon types ordered in descending order
+by ID number
+
+REQUEST: /type/<name_of_type>
+RESPONSE: a JSON list of dictionaries containing all pokemon with a given
+type ordered by descending ID number

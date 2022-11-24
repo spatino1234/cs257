@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Egg Groups</title>
+    <script type = "text/javascript" src = "{{ url_for('static', filename='egg_groups.js') }}"></script>
+    <link rel = "stylesheet" type= "text/css" href = "{{ url_for('static',filename='egg_groups.css') }}">
+    <link rel = "icon" type = "image/x-icon" href = "{{ url_for('static',filename='favicon.ico') }}">
+</head>
+
+<body>
+    <div class = "header">
+        <!-- The following site was used to learn how to make an image a link:
+        https://pagedart.com/blog/linking-images-in-html/ -->
+        <a href = "/"><img id = "logo" alt = "Logo" src="{{ url_for('static', filename='logo.png') }}"></a>
+        <a href = "/generations">Generations</a>
+        <a href = "/legendaries">Legendaries</a>
+        <div>
+            <a href = "/egg_groups" id = "current_page">Egg Groups</a>
+        </div>
+        <a href = "/types">Types</a>
+        
+        <div class="search_text_pair">
+            <select id = "search_dropdown"> 
+                <option value = "pokemon">Pokémon</option> 
+                <option value = "pokedex_number">Pokédex Number</option> 
+                <option value = "ability">Ability</option> 
+                <option value = "type">Type</option> 
+            </select>
+            <input id = "search_bar" name = "search_bar" type="text" placeholder="Search"/>
+            <input id = "go_button" type="submit" value="Go"><br/> <!-- <br /> is line break-->
+        </div>
+    </div>
+
+    <div class = "title_container">
+        <h1>Egg Groups</h1>
+    </div>
+
+    <div class = "empty_space"></div>
+
+    <!-- Populate the Check Boxes -->
+    <div>
+        <table id = "egg_group_selector"></table>
+    </div>
+
+    <div id = "twenty_px_space"></div>
+
+    <!-- Populate the Results Table -->
+    <div>
+        <table id = "egg_group_results"></table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
+    <link rel="stylesheet" href="pokemon.css" type="text/css" />
+</head>
+<body>
+    <div class = "header">
+        <!-- The following site was used to learn how to make an image a link:
+        https://pagedart.com/blog/linking-images-in-html/ -->
+        <div>
+            <a href = "home.html"><img alt = "Logo" id="logo" src="logo.png"></a>
+            <a href = "home.html">Home</a>
+        </div>
+
+        <!-- https://stackoverflow.com/questions/3463621/css-label-text-right-below-input-element -->
+        <div class="search_text_pair">
+            <input name = "search_bar" type="text" placeholder="search anything"/>
+            <input type="submit" value="Go"><br /> <!-- <br /> is line break-->
+            <label for="search_bar" id = "advanced_search"><a href = "advanced_search.html">Advanced Search</a></label>
+        </div>
+    </div>
+
+    <div class = "title_container">
+        <!-- Eventually make this a variable that displays the pokemon name -->
+        <h1>Pikachu</h1>
+    </div>
+
+    <div class = "empty_space"></div>
+
+    <div class = "pokemon_container">
+        <div id="image">
+            <img alt = "pikachu" src = "pikachu.jpeg">
+        </div>
+        <div id="stats">
+            <table id = "stats_table">
+                <tr>
+                    <td>HP:</td>
+                    <td>70</td>
+                <tr>
+                <tr>
+                    <td>Def:</td>
+                    <td>65</td>
+                <tr>
+                <tr>
+                    <td>Foo:</td>
+                    <td>Bar</td>
+                <tr>
+            </table>
+        </div>
+
+        <div id="type_chart">
+            <!-- https://stackoverflow.com/questions/13624276/how-to-separate-table-rows-with-a-line -->
+            <table id = "type_table">
+            <tr>
+                <td>Fire:</td>
+                <td>1</td>
+                <td>Water</td>
+                <td>0.5</td>
+            <tr>
+            <tr>
+                <td>Grass:</td>
+                <td>4</td>
+                <td>Ice</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Foo:</td>
+                <td>4</td>
+                <td>Bar</td>
+                <td>0</td>
+            </tr>
+            </table>
+        </div>
+
+        <div id="graph">
+            <!-- https://stackoverflow.com/questions/58638421/horizontal-bars-in-plain-html -->
+            <table id = "graph_table">
+                <tr>
+                    <td>HP</td>
+                    <td>70</td>
+                    <td>
+                        <div id = "graph_bar" style='background-color:blue; width:500px'></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Def</td>
+                    <td>65</td>
+                    <td>
+                        <div id = "graph_bar" style='background-color:green; width:450px'></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

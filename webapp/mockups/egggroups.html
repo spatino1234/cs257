@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Groups</title>
+    <link rel="stylesheet" href="egggroups.css" type="text/css" />
+
+
+    <div class = "header">
+        <!-- The following site was used to learn how to make an image a link:
+        https://pagedart.com/blog/linking-images-in-html/ -->
+        <div>
+            <a href = "home.html"><img alt="Logo" id="logo" src="logo.png"></a>
+            <a href = "home.html">Home</a>
+        </div>
+        
+        
+        <div class="search_text_pair">
+            <input name = "search_bar" type="text" placeholder="search anything"/>
+            <input type="submit" value="Go"><br /> <!-- <br /> is line break-->
+            <label for="search_bar" id = "advanced_search"><a href = "advanced_search.html">Advanced Search</a></label>
+        </div>
+    </div>
+
+    <div class = "title_container">
+        <h1>Egg Groups</h1>
+    </div>
+
+    <div class = "empty_space"></div>
+    <!-- https://stackoverflow.com/questions/3463621/css-label-text-right-below-input-element -->
+    
+    <div id = "Types">
+        <table width = "1200">
+            <!-- <caption>Pokemon Types</caption> -->
+            <!-- Pokemon type colors from https://www.epidemicjohto.com/t882-type-colors-hex-colors -->
+            <tr bgcolor = "grey"><th width = "200", bgcolor="D25064"><input type="checkbox" name="Monster checkbox"/>Monster</th><th width = "200", bgcolor="D29682"><input type="checkbox" name="Human-Like checkbox"/>Human-Like</th></tr>
+            <tr align = "center"><td bgcolor="97B5FD"><input type="checkbox" name="Water 1 checkbox"/><b>Water 1</b></td><td bgcolor="5876BE"><input type="checkbox" name="Water 3 checkbox"/><b>Water 3</b></td></tr>
+            <tr align = "center"><td bgcolor="AAC22A"><input type="checkbox" name="Bug checkbox"/><b>Bug</b></td><td bgcolor="7A6252"><input type="checkbox" name="Mineral checkbox"/><b>Mineral</b></td></tr>
+            <tr align = "center"><td bgcolor="B29AFA"><input type="checkbox" name="Flying checkbox"/><b>Flying</b></td><td bgcolor="#8A8A8A"><input type="checkbox" name="Amorphous checkbox"/><b>Amorphous</b></td></tr>
+            <tr align = "center"><td bgcolor="E0C068"><input type="checkbox" name="Field checkbox"/><b>Field</b></td><td bgcolor="#729AFA"><input type="checkbox" name="Water 2 checkbox"/><b>Water 2</b></td></tr>
+            <tr align = "center"><td bgcolor="FFC8F0"><input type="checkbox" name="Fairy checkbox"/><b>Fairy</b></td><td bgcolor="A664BF"><input type="checkbox" name="Ditto checkbox"/><b>Ditto</b></td></tr>
+            <tr align = "center"><td bgcolor="82D25A"><input type="checkbox" name="Grass checkbox"/><b>Grass</b></td><td bgcolor="7A42FF"><input type="checkbox" name="Dragon checkbox"/><b>Dragon</b></td></tr>
+            <tr align = "center"><td bgcolor="646666"><input type="checkbox" name="no eggs discovered checkbox"/><b>No Eggs Discovered</b></td><td bgcolor="0080C0"><input type="checkbox" name="Gender Unknown checkbox"/><b>Gender Unknown</b></td></tr>
+        </table>
+    </div>
+</head>
+<body>
+    
+</body>
+</html>

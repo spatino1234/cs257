@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>{{name}}</title>
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static',filename='pokedex.css') }}">
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static',filename='chartist.min.css') }}">
+    <link rel = "icon" type = "image/x-icon" href = "{{ url_for('static',filename='favicon.ico') }}">
+</head>
+
+<!-- The following link was used to make the table https://www.youtube.com/watch?v=iDA0kF5lrVk -->
+<body>
+    <div class = "header">
+        <!-- The following site was used to learn how to make an image a link:
+        https://pagedart.com/blog/linking-images-in-html/ -->
+        <a href = "/"><img id = "logo" alt = "Logo" src="{{ url_for('static', filename='logo.png') }}"></a>
+        <a href = "/generations">Generations</a>
+        <a href = "/legendaries">Legendaries</a>
+        <a href = "/egg_groups">Egg Groups</a>
+        <a href = "/types">Types</a>
+        
+        <div class="search_text_pair">
+            <select id = "search_dropdown"> 
+                <option value = "pokemon">Pokémon</option> 
+                <option value = "pokedex_number">Pokédex Number</option> 
+                <option value = "ability">Ability</option> 
+                <option value = "type">Type</option> 
+            </select>
+            <input id = "search_bar" name = "search_bar" type = "text" placeholder="Search"/>
+            <input id = "go_button" type = "submit" value="Go"><br/> <!-- <br /> is line break-->
+        </div>
+    </div>
+
+    <div class = "title_container">
+        <h1 id = "pokemon_name">{{name}}</h1>
+
+        <div>#{{dex_num}}</div>
+
+        {% if type2 != 'NA' %}
+        <table id = "types_table">
+            <tr>
+                <td id = "{{type1}}" style="width: 50%">{{type1}}</td>
+                <td id = "{{type2}}" style="width: 50%">{{type2}}</td>
+            </tr>
+        </table>
+        {% else %}
+        <table id = "types_table">
+            <tr>
+                <td id = "{{type1}}">{{type1}}</td>
+            </tr>
+        </table>
+        {% endif %}
+
+        <table id = ability_table>
+            <tr>
+                <th style = "width: 33%">Ability 1</th>
+                <th style = "width: 33%">Ability 2</th>
+                <th style = "width: 33%">Hidden Ability</th>
+            </tr>
+            <tr>
+                <td style = "width: 33%">{{ability1}}</td>
+                <td style = "width: 33%">{{ability2}}</td>
+                <td style = "width: 33%">{{ability3}}</td>
+            </tr>
+        </table>
+
+        <table id = "height_weight">
+            <tr>
+                <td>{{height}} (m)</td>
+                <td>{{weight}} (kg)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class = "empty_space"></div>    
+
+    <div class = "pokemon_container"> 
+        <div id = "stat_values">
+            <table>
+                <tr>
+                    <td id = "hp" >{{hp | int}}</td>
+                </tr>
+                <tr>
+                    <td id = "atk" >{{atk | int}}</td>
+                </tr>
+                <tr>
+                    <td id = "def" >{{defense | int}}</td>
+                </tr>
+                <tr>
+                    <td id = "spatk" >{{spatk | int}}</td>
+                </tr>
+                <tr>
+                    <td id = "spdef" >{{spdef | int}}</td>
+                </tr>
+                <tr>
+                    <td id = "spd" >{{spd | int}}</td>
+                </tr>
+            </table>
+        </div> 
+        <div class = "stats_graph_container" >
+            <div class = "ct-chart ct-perfect-fourth" id = "stats_chart"></div>
+        </div> 
+        <div id = "type_chart">
+            <!-- https://stackoverflow.com/questions/13624276/how-to-separate-table-rows-with-a-line -->
+            <table id = "type_table">
+                <!-- https://www.w3.org/WAI/tutorials/tables/irregular/ -->
+                <th colspan = "4" style = "text-align: center">Type Effectiveness</th>
+                <tr>
+                    <td>Normal:</td>
+                    <td>{{normal_resist}}</td>
+                    <td>Fire:</td>
+                    <td>{{fire_resist}}</td>
+                <tr>
+                <tr>
+                    <td>Water:</td>
+                    <td>{{water_resist}}</td>
+                    <td>Electric:</td>
+                    <td>{{electric_resist}}</td>
+                </tr>
+                <tr>
+                    <td>Grass:</td>
+                    <td>{{grass_resist}}</td>
+                    <td>Ice:</td>
+                    <td>{{ice_resist}}</td>
+                </tr>
+                <tr>
+                    <td>Fighting:</td>
+                    <td>{{fighting_resist}}</td>
+                    <td>Poison:</td>
+                    <td>{{poison_resist}}</td>
+                </tr>
+                <tr>
+                    <td>Ground:</td>
+                    <td>{{ground_resist}}</td>
+                    <td>Flying:</td>
+                    <td>{{flying_resist}}</td>
+                </tr>
+                <tr>
+                    <td>Psychic:</td>
+                    <td>{{psychic_resist}}</td>
+                    <td>Bug:</td>
+                    <td>{{bug_resist}}</td>
+                </tr>
+                <tr>
+                    <td>Rock:</td>
+                    <td>{{rock_resist}}</td>
+                    <td>Ghost:</td>
+                    <td>{{ghost_resist}}</td>
+                </tr>
+                <tr>
+                    <td>Dragon:</td>
+                    <td>{{dragon_resist}}</td>
+                    <td>Dark:</td>
+                    <td>{{dark_resist}}</td>
+                </tr>
+                <tr>
+                    <td>Steel:</td>
+                    <td>{{steel_resist}}</td>
+                    <td>Fairy:</td>
+                    <td>{{fairy_resist}}</td>
+                </tr>
+            </table>
+        </div>  
+    </div>  
+
+    <script type="text/javascript" src="{{ url_for('static', filename='chartist.min.js') }}" ></script>
+    <!-- the go button and search bar functionality has been added into simple-charts.js -->
+    <script type="text/javascript" src="{{ url_for('static', filename='pokedex.js') }}" ></script>
+</body>
+</html>

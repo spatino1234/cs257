@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Generations</title>
+    <script type = "text/javascript" src = "{{ url_for('static', filename='generations.js') }}"></script>
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static',filename='generations.css') }}">
+    <link rel = "icon" type = "image/x-icon" href="{{ url_for('static',filename='favicon.ico') }}">
+</head>
+
+<body>
+    <div class = "header">
+        <!-- The following site was used to learn how to make an image a link:
+        https://pagedart.com/blog/linking-images-in-html/ -->
+        <a href = "/"><img id = "logo" alt = "Logo" src="{{ url_for('static', filename='logo.png') }}"></a>
+        <div>
+            <a href = "/generations" id = "current_page">Generations</a>
+        </div>
+        <a href = "/legendaries">Legendaries</a>
+        <a href = "/egg_groups">Egg Groups</a>
+        <a href = "/types">Types</a>
+        
+        <div class="search_text_pair">
+            <select id = "search_dropdown"> 
+                <option value = "pokemon">Pokémon</option> 
+                <option value = "pokedex_number">Pokédex Number</option> 
+                <option value = "ability">Ability</option> 
+                <option value = "type">Type</option> 
+            </select>
+            <input id = "search_bar" name = "search_bar" type = "text" placeholder = "Search"/>
+            <input id = "go_button" type = "submit" value = "Go"><br/> <!-- <br /> is line break-->
+        </div>
+    </div>
+
+    <div class = "title_container">
+        <h1>Generations</h1>
+    </div>
+
+    <div class = "empty_space"></div>
+
+    <div id = "drop_down">
+        <!-- The following page was used to learn how to make a drop down menu in html:
+            https://www.w3schools.com/tags/tag_select.asp -->
+        <label for = "generations menu">Choose a generation:</label>
+        <select name = "generations menu" id = "generation_selector"></select>
+    </div>
+    
+    <p><table id = "generation_table"></table></p>
+
+</body>
+</html>

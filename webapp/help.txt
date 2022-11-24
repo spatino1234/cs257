@@ -1,0 +1,93 @@
+Ruben Boero and Serafin Patino
+
+API ENDPOINTS:
+    REQUEST: /api/generations
+    RESPONSE: a JSON list of names of all 8 of the generations included in our database
+    EXAMPLE: /api/generations
+            ["generation 1", "generation 2", "generation 3", "generation 4", 
+            "generation 5", "generation 6", "generation 7", "generation 8"]
+    
+    REQUEST: /api/generation/<generation name>
+    RESPONSE: a JSON list of dictionaries of all attributes of all Pokémon who are in the
+                generation that was searched for
+    EXAMPLE: /api/generation/generation%201
+            [{"dex_num": 1, "name": "Bulbasaur", "ability1": "Overgrow", 
+            "ability2": "NA", "ability3": "Chlorophyll", "type1": "Grass",
+            "type2": "Poison", "generation": "generation 1", "height": 0.7, 
+            "weight": 6.9, "normal_resist": 1.0, "fire_resist": 2.0,
+            "water_resist": 0.5, "electric_resist": 0.5, "grass_resist": 0.25, 
+            "ice_resist": 2.0, "fighting_resist": 0.5, "poison_resist": 1.0, 
+            "ground_resist": 1.0, "flying_resist": 2.0, "psychic_resist": 2.0, 
+            "bug_resist": 1.0, "rock_resist": 1.0, "ghost_resist": 1.0, 
+            "dragon_resist": 1.0, "dark_resist": 1.0, "steel_resist": 1.0, 
+            "fairy_resist": 0.5}, ..., {...}]
+
+    REQUEST: /api/legendaries
+    RESPONSE: a JSON list of all legendary types included in our database
+    EXAMPLE: /api/legendaries
+            ["non-legendary", "legendary", "sub-legendary", "mythical"]
+    
+    REQUEST: /api/legendaries/<legendary category>
+    RESPONSE: a JSON list of dictionaries all attributes of all Pokémon who are in the
+                legendary category that was searched for
+    EXAMPLE: /api/legendaries/legendary
+            [{"dex_num": 150, "name": "Mewtwo", "ability1": "Pressure", 
+            "ability2": "NA", "ability3": "Unnerve", "type1": "Psychic", 
+            "type2": "NA", "generation": "generation 1", "height": 2.0, 
+            "weight": 122.0, "normal_resist": 1.0, "fire_resist": 1.0, 
+            "water_resist": 1.0, "electric_resist": 1.0, "grass_resist": 1.0, 
+            "ice_resist": 1.0, "fighting_resist": 0.5, "poison_resist": 1.0, 
+            "ground_resist": 1.0, "flying_resist": 1.0, "psychic_resist": 0.5, 
+            "bug_resist": 2.0, "rock_resist": 1.0, "ghost_resist": 2.0, 
+            "dragon_resist": 1.0, "dark_resist": 2.0, "steel_resist": 1.0, 
+            "fairy_resist": 1.0}, ..., {...}]
+
+    REQUEST: /api/types
+    RESPONSE: a JSON list of all types in our databse
+    EXAMPLE: /api/types
+            ["", "Bug", "Dark", "Dragon", "Electric", "Fairy", "Fighting", 
+            "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Normal", 
+            "Poison", "Psychic", "Rock", "Steel", "Water"]
+
+            *Note that "" is an empty string used for when a Pokémon doesn't
+            have 2 types
+    
+    REQUEST: /api/type/<search type>
+    RESPONSE: a JSON list of dictionries of all attributes of all Pokémon who 
+                have the type that was searched for
+    EXAMPLE: /api/type/Ground
+            [{"dex_num": 27, "name": "Sandshrew", "ability1": "Sand Veil", 
+            "ability2": "NA", "ability3": "Sand Rush", "type1": "Ground", 
+            "type2": "NA", "generation": "generation 1", "height": 0.6, 
+            "weight": 12.0, "normal_resist": 1.0, "fire_resist": 1.0, 
+            "water_resist": 2.0, "electric_resist": 0.0, "grass_resist": 2.0, 
+            "ice_resist": 2.0, "fighting_resist": 1.0, "poison_resist": 0.5, 
+            "ground_resist": 1.0, "flying_resist": 1.0, "psychic_resist": 1.0, 
+            "bug_resist": 1.0, "rock_resist": 0.5, "ghost_resist": 1.0, 
+            "dragon_resist": 1.0, "dark_resist": 1.0, "steel_resist": 1.0, 
+            "fairy_resist": 1.0}, ..., {...}]
+    
+    REQUEST: /api/egg_groups
+    RESPONSE: a JSON list of all egg groups in our database
+    EXAMPLE: /api/egg_groups
+            ["", "Amorphous", "Bug", "Ditto", "Dragon", "Fairy", "Field", "Flying",
+             "Grass", "Human-Like", "Mineral", "Monster", "Undiscovered", "Water 1",
+             "Water 2", "Water 3"]
+
+             *Note that "" is an empty string used for when a Pokémon doesn't
+            belong to multiple egg groups
+
+    REQUEST: /api/egg_group/<search egg group>
+    RESPONSE: a JSON list of dictionaries of all attributes of all Pokémon who are in the
+                legendary category that was searched for
+    EXAMPLE: /api/egg_group/Bug
+            [{"dex_num": 10, "name": "Caterpie", "ability1": "Shield Dust", "ability2": "NA",
+            "ability3": "Run Away", "type1": "Bug", "type2": "NA", "generation": "generation 1",
+            "height": 0.3, "weight": 2.9, "normal_resist": 1.0, "fire_resist": 2.0, "water_resist": 1.0,
+            "electric_resist": 1.0, "grass_resist": 0.5, "ice_resist": 1.0, "fighting_resist": 0.5, 
+            "poison_resist": 1.0, "ground_resist": 0.5, "flying_resist": 2.0, "psychic_resist": 1.0, 
+            "bug_resist": 1.0, "rock_resist": 2.0, "ghost_resist": 1.0, "dragon_resist": 1.0, 
+            "dark_resist": 1.0, "steel_resist": 1.0, "fairy_resist": 1.0}, ..., {...}]
+  
+    REQUEST: /api/help
+    RESPONSE: the output of this txt file

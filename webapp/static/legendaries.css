@@ -1,0 +1,58 @@
+/* This file was created by Ruben Boero and Serafin Patino */
+
+html * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    /* https://teamtreehouse.com/community/how-to-position-a-flex-item-to-the-far-right-in-the-flexbox */
+    justify-content: space-between;
+}
+
+.title_container {
+    text-align: center;
+    padding: 10px;
+}
+
+.empty_space {
+    padding: 50px;
+}
+
+#logo{
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+
+.empty_space {
+    padding: 50px;
+}
+
+#drop_down {
+    text-align: center;
+    padding: 10px;
+}
+
+#legendary_table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: left;
+    width: 90%;
+}
+
+table, td, th {
+    border: 2px solid black;
+}
+
+#table_header {
+    font-size: large;
+    font-weight: bold;
+}
+
+#current_page {
+    border-style: solid;
+    border-color: black;
+    padding: 2px;
+}
